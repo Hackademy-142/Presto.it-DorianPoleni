@@ -1,0 +1,87 @@
+/* Main CSS Settings */
+
+:root{
+    --color-P : #898980;
+    --color-S : #A9B2AC;
+    --color-A : #DEF2C8;
+}
+
+*{
+    font-family: "Zen Kaku Gothic New",sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.titleFont{
+    font-family: "Ojuju",sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    /* color: var(--color-P); */
+}
+
+.color-P{
+    color: var(--color-P);
+}
+.color-S{
+    color: var(--color-S);
+}
+.color-A{
+    color: var(--color-A);
+}
+
+.bg-P{
+    background-color:  var(--color-P);
+}
+.bg-S{
+    background-color: var(--color-S);
+}
+.bg-A{
+    background-color: var(--color-A);
+}
+
+/* PROJECT */
+h1{
+    color:var(--color-S);
+}
+
+.transitionStandard{
+transition: 0.5s;
+}
+
+/* NAVBAR */
+.navbarScrolled{
+    background-color:rgba(169, 178, 172, 0.5) !important;
+    margin: 1vh 15vw;
+    backdrop-filter: blur(5px);
+    border : 1px solid wheat;
+    border-radius: 5px;
+}
+
+.brandScrolled{
+    background-image: url(./media/logoipsum-212.svg);
+    /* src: url(./media/logoipsum-212.svg) !important; */
+}
+
+/* HEADER */
+.masthead{
+    height: 75vh;
+    background-color: var(--color-P);
+}
+
+/* HEADER BUTTONS */
+.headBtn{
+    border: 1px solid var(--color-A) ;
+    text-align: center;
+}
+
+/* CATEGORIES */
+.catImage{
+    width: 100%;
+    padding: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px solid var(--color-A);
+    border-radius: 50%;
+ 
+}
