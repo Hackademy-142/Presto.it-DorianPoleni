@@ -45,7 +45,7 @@ h1{
 }
 
 .transitionStandard{
-transition: 0.5s;
+    transition: 0.5s;
 }
 
 /* NAVBAR */
@@ -83,5 +83,14 @@ transition: 0.5s;
     background-size: cover;
     border: 3px solid var(--color-A);
     border-radius: 50%;
- 
+}
+
+/* BUTTONS */
+.boxNumber{
+    height: 100px;
+    /* width: 100px; */
+    border-radius: 10px;
+    background-color: var(--color-P) !important;
+    color: var(--color-A) !important;
+
 }
