@@ -104,31 +104,23 @@ h1{
     color: var(--color-A) !important;
 }
 
-.boxNumber:hover{
+.boxNumber>:hover{
     font-size: larger;
     color: var(--color-P) !important;
     background-color: var(--color-A) !important;
     transition: 0.5s;
 }
 
+.transition05{
+    transition: .5s;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* MEDIA QUERIES */
 .itemCard:hover{
-    transform: scale(1.1);
+    div>img{
+        overflow: hidden !important;
+        transform: scale(1.1);
+        transition: .5s;
+    }
 
 }
 

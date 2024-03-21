@@ -8,6 +8,13 @@ nUsers = document.querySelector("#nUsers");
 nComments = document.querySelector("#nComments");
 idCategories = document.querySelector("#idCategories")
 
+let items = [
+    {name: "item 1", description: "description", price: 100, available: true },
+    {name: "item 2", description: "description", price: 100, available: true },
+    {name: "item 3", description: "description", price: 100, available: true }
+]
+
+
 
 //Main Program
 window.addEventListener("scroll", () => {
@@ -49,6 +56,14 @@ const intersectNArticles = new IntersectionObserver(
         
         
 //Function Declaration
+function createCards(items){
+    
+}
+
+
+
+
+
         function counterTimer(setPoint, time, target){
             let counter = 0;
             
