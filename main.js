@@ -6,7 +6,10 @@ containerNav = document.querySelector("#containerNav");
 nArticles = document.querySelector("#nArticles");
 nUsers = document.querySelector("#nUsers");
 nComments = document.querySelector("#nComments");
+idCategories = document.querySelector("#idCategories")
 
+
+//Main Program
 window.addEventListener("scroll", () => {
     if (window.scrollY > 200){
         navbar.classList.add("navbarScrolled");
@@ -24,30 +27,41 @@ window.addEventListener("scroll", () => {
         // navbarBrand.classList.remove("brandScrolled");
         navbar.classList.add("transitionStandard");
     }
-    
-    
 })
 
+let isIntersected = false;
 
-counterTimer(10,100,nArticles);
-counterTimer(500,100,nUsers);
-counterTimer(300,100,nComments);
-
-
-
-
+const intersectNArticles = new IntersectionObserver( 
+    (entries) => {
+        entries.forEach( 
+            (entry) => {
+                if (entry.isIntersecting && isIntersected == false){
+                    counterTimer(10,100,nArticles);
+                    counterTimer(500,100,nUsers);
+                    counterTimer(300,100,nComments);
+                    isIntersected = true;
+                }
+            })
+        }
+        )
+        
+        intersectNArticles.observe(nArticles);
+        
+        
 //Function Declaration
-function counterTimer(setPoint, time, target){
-    let counter = 0;
-    
-    let interval = setInterval(() => {
-        if (counter < setPoint){
-            counter++;
-            console.log(counter);
-            target.innerHTML = counter;
+        function counterTimer(setPoint, time, target){
+            let counter = 0;
+            
+            let interval = setInterval(() => {
+                if (counter < setPoint){
+                    counter++;
+                    console.log(counter);
+                    target.innerHTML = counter;
+                }
+                else {
+                    clearInterval(interval);
+                }
+            }, (time/setPoint)*time);
         }
-        else {
-            clearInterval(interval);
-        }
-    }, (time/setPoint)*time);
-}
+        
+        

@@ -74,6 +74,16 @@ h1{
     text-align: center;
 }
 
+/* CARDS */
+/* CARD BUTTON */
+.cardButtonBuy{
+    background-color: var(--color-P);
+    color: var(--color-A);
+}
+
+
+
+
 /* CATEGORIES */
 .catImage{
     width: 100%;
@@ -92,5 +102,35 @@ h1{
     border-radius: 10px;
     background-color: var(--color-P) !important;
     color: var(--color-A) !important;
+}
+
+.boxNumber:hover{
+    font-size: larger;
+    color: var(--color-P) !important;
+    background-color: var(--color-A) !important;
+    transition: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+.itemCard:hover{
+    transform: scale(1.1);
 
 }
+
+
+
