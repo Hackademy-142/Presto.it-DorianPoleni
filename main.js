@@ -20,7 +20,7 @@ let items = [
 
 //Main Program
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 200){
+    if (window.scrollY > 0){
         navbar.classList.add("navbarScrolled");
         navbar.classList.add("transitionStandard");
         //  TEXTToLogo
@@ -37,6 +37,9 @@ window.addEventListener("scroll", () => {
         navbar.classList.add("transitionStandard");
     }
 })
+
+
+
 
 //interesection observer
 let isIntersected = false;
@@ -61,9 +64,7 @@ const intersectNArticles = new IntersectionObserver(
         
         //Function Declaration
         function createCards(items){
-            
             items.forEach( (element,index) => {
-                
                 //Create last 3 Card Object entries
                 if (index >= items.length - 3){
                     //Create Card Object
@@ -129,7 +130,7 @@ const intersectNArticles = new IntersectionObserver(
 
                 if (counter < setPoint){
                     counter++;
-                    console.log(counter);
+                    // console.log(counter);
                     target.innerHTML = counter;
                 }
                 else {

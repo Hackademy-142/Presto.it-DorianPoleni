@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "nome": "Vita Sospesa",
+    "prezzo": 334,
+    "categoria": "Life",
+    "available": true,
+    "img": "https://picsum.photos/207?grayscale"
+  },
+  {
+    "id": 2,
+    "nome": "Riflessi d'Anima",
+    "prezzo": 724,
+    "categoria": "Art",
+    "available": false,
+    "img": "https://picsum.photos/200?grayscale"
+  },
+  {
+    "id": 3,
+    "nome": "Oltre il Silenzio",
+    "prezzo": 552,
+    "categoria": "Nature",
+    "available": true,
+    "img": "https://picsum.photos/193?grayscale"
+  },
+  {
+    "id": 4,
+    "nome": "Istinto Urbano",
+    "prezzo": 897,
+    "categoria": "Urban",
+    "available": true,
+    "img": "https://picsum.photos/196?grayscale"
+  },
+  {
+    "id": 5,
+    "nome": "Sospiri di Luce",
+    "prezzo": 1121,
+    "categoria": "Light",
+    "available": false,
+    "img": "https://picsum.photos/200?grayscale"
+  },
+  {
+    "id": 6,
+    "nome": "Nel Cuore della Città",
+    "prezzo": 631,
+    "categoria": "Urban",
+    "available": true,
+    "img": "https://picsum.photos/201?grayscale"
+  },
+  {
+    "id": 7,
+    "nome": "Echi del Passato",
+    "prezzo": 840,
+    "categoria": "History",
+    "available": true,
+    "img": "https://picsum.photos/195?grayscale"
+  },
+  {
+    "id": 8,
+    "nome": "Armonia Dimenticata",
+    "prezzo": 1005,
+    "categoria": "Memory",
+    "available": true,
+    "img": "https://picsum.photos/199?grayscale"
+  },
+  {
+    "id": 9,
+    "nome": "Ombre e Luci",
+    "prezzo": 487,
+    "categoria": "Light",
+    "available": false,
+    "img": "https://picsum.photos/209?grayscale"
+  },
+  {
+    "id": 10,
+    "nome": "Sguardo Intimo",
+    "prezzo": 799,
+    "categoria": "Portrait",
+    "available": true,
+    "img": "https://picsum.photos/195?grayscale"
+  },
+  {
+    "id": 11,
+    "nome": "Trame Segrete",
+    "prezzo": 673,
+    "categoria": "Mystery",
+    "available": true,
+    "img": "https://picsum.photos/201?grayscale"
+  },
+  {
+    "id": 12,
+    "nome": "Frammenti di Tempo",
+    "prezzo": 521,
+    "categoria": "Time",
+    "available": false,
+    "img": "https://picsum.photos/208?grayscale"
+  },
+  {
+    "id": 13,
+    "nome": "Echi del Paesaggio",
+    "prezzo": 942,
+    "categoria": "Nature",
+    "available": true,
+    "img": "https://picsum.photos/197?grayscale"
+  },
+  {
+    "id": 14,
+    "nome": "Visioni Abbandonate",
+    "prezzo": 770,
+    "categoria": "Abandoned",
+    "available": false,
+    "img": "https://picsum.photos/195?grayscale"
+  },
+  {
+    "id": 15,
+    "nome": "Sogni Infranti",
+    "prezzo": 883,
+    "categoria": "Dream",
+    "available": true,
+    "img": "https://picsum.photos/210?grayscale"
+  },
+  {
+    "id": 16,
+    "nome": "Tra le Brume del Mattino",
+    "prezzo": 604,
+    "categoria": "Nature",
+    "available": true,
+    "img": "https://picsum.photos/204?grayscale"
+  },
+  {
+    "id": 17,
+    "nome": "Labirinti Metropolitani",
+    "prezzo": 1087,
+    "categoria": "Urban",
+    "available": false,
+    "img": "https://picsum.photos/199?grayscale"
+  },
+  {
+    "id": 18,
+    "nome": "Emozioni Nascoste",
+    "prezzo": 447,
+    "categoria": "Emotion",
+    "available": true,
+    "img": "https://picsum.photos/195?grayscale"
+  },
+  {
+    "id": 19,
+    "nome": "Spazi Inesplorati",
+    "prezzo": 765,
+    "categoria": "Exploration",
+    "available": true,
+    "img": "https://picsum.photos/206?grayscale"
+  },
+  {
+    "id": 20,
+    "nome": "Orme del Passaggio",
+    "prezzo": 938,
+    "categoria": "Journey",
+    "available": false,
+    "img": "https://picsum.photos/192?grayscale"
+  }
+]
