@@ -29,7 +29,7 @@
   
 </head>
 <body>
-
+  
   <!-- NAVBAR -->
   <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-P">
     <div class="container-fluid" id="containerNav">
@@ -61,7 +61,7 @@
                 <li><a class="dropdown-item" href="#">Paints</a></li>
                 <li><a class="dropdown-item" href="#">Sculptures</a></li>
               </ul>
-
+              
             </div>
           </li>
         </ul>
@@ -69,35 +69,68 @@
     </div>
   </nav>
   <!-- NAVBAR END -->
+  
+  
+  
+  
+  <div class="container-fluid">
+    <div class="row" >
+      <h2 id="categories" class="titleFont display-1 color-P text-center border-bottom my-5">PHOTOS</h2>
+      <!-- <div class="col-12 my-5 bg-primary" id="filterContainer"></div> -->
+      
+      
+      
+      
+      <!-- Filter column -->
+      <div class="col-12 col-lg-4 ">
+        <h3>FILTERS</h3>
+        
+        <!-- Category Filter -->
+        <div id="filterContainer">
+          
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="All" checked>
+            <label class="form-check-label" for="All">
+              All
+            </label>
+          </div>
+        </div>
 
+        <!-- Range Filter -->
+        <div>
+          <label for="customRange1" class="form-label" id="currentValue">Example range</label>
+          <input type="range" class="form-range"  min="" max="" id="inputPrice" value="">
+        </div>
 
+        <!-- Name Filter -->
+        <div>
+          <div class="input-group mb-3">
+            <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
+            <input type="text" class="form-control" placeholder="filter" aria-label="Username" aria-describedby="basic-addon1" id="inputword">
+          </div>
+        </div>
 
+      </div>
 
-<div class="container-fluid">
-  <div class="row" >
-    <h2 id="categories" class="titleFont display-1 color-P text-center border-bottom my-5">PHOTOS</h2>
-    <!-- <div class="col-12 my-5 bg-primary" id="filterContainer"></div> -->
-    <!-- Filter column -->
-    <div class="col-12 col-lg-4 vh-100 bg-success">
+    
+      
 
-    </div>
-
-    <!-- Articles column -->
-    <div class="col-12 col-lg-8 bg-P" >
-      <div class="container">
-        <div class="row justify-content-evenly"  id="cardContainer">
-         
+      <!-- Articles column -->
+      <div class="col-12 col-lg-8 " >
+        <div class="container-fluid">
+          <div class="row justify-content-evenly"  id="itemsContainer">
+            
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-
-
-
-
-      <!-- AOS -->
+  
+  
+  
+  
+  
+  <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
   <!-- BOOTSTRAP -->
