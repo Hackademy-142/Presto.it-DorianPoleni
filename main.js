@@ -8,6 +8,7 @@ nUsers = document.querySelector("#nUsers");
 nComments = document.querySelector("#nComments");
 idCategories = document.querySelector("#idCategories");
 cardContainer = document.querySelector("#cardContainer");
+badgeContainer1 = document.querySelector("#badgeContainer1");
 
 let items = [
     {name: "item 1", description: "description 1", price: 100, available: true, img: "https:/picsum.photos/199?grayscale" },
@@ -60,7 +61,17 @@ const intersectNArticles = new IntersectionObserver(
         
         fetch("./photos.json").then( (response) => response.json()).then( (data)  => {
             //Swiper
-            const swiper = new Swiper(".mySwiper", {
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 4,
+                grid: {
+                    rows: 1,
+                },
+                loop: true,
+                spaceBetween: 30,                
+                autoplay: {
+                  delay: 1500,
+                  disableOnInteraction: false,
+                },
                 navigation: {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
@@ -76,90 +87,89 @@ const intersectNArticles = new IntersectionObserver(
                 data.forEach( (element,index) => {
                     //Create last 3 Card Object entries
                     
-                        //Create Card Object
-                        let sAvailable = "NA";
-                        let faAvailable = "NA";
+                    //Create Card Object
+                    let sAvailable = "NA";
+                    let faAvailable = "NA";
+                    
+                    if (element.available == true){
+                        sAvailable = "Available";
+                        faAvailable = "fa-solid fa-check";
+                    } else{
+                        sAvailable = "Not Available";
+                        faAvailable = "fa-solid fa-xmark";
                         
-                        if (element.available == true){
-                            sAvailable = "Available";
-                            faAvailable = "fa-solid fa-check";
-                        } else{
-                            sAvailable = "Not Available";
-                            faAvailable = "fa-solid fa-xmark";
-                            
-                        }
-                        
-                        let itemcard = document.createElement("div");
-                        // itemcard.classList.add("col-11", "col-md-4", "p-0", "itemCard", "position-relative", "d-flex", "justify-content-center", "my-4");
-                        itemcard.classList.add("swiper-slide");
-                        let itemAvailable = `   <div class="swiper-slide">
-                                                    <div class="card" style="width: 15rem;">
-                                                    <div class="overflow-hidden">
-                                                    <img src="${element.img}" class="card-img-top transition05" alt="...">
-                                                    </div>
-                                                    <div class="card-body d-flex flex-column justify-content-between align-items-center">
-                                                    <h5 class="card-title">${element.nome}</h5>
-                                                    <p class="card-text">${element.categoria}</p>
-                                                    <i class="fa-solid fa-heart-circle-plus"></i>
-                                                    </div>
-                                                    <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item">
-                                                    <div class="d-flex justify-content-between align-items-center align-middle">
-                                                    <strong>Price</strong><span>${element.prezzo}</span>
-                                                    </div></li>
-                                                    <li class="list-group-item">
-                                                    <div class="d-flex justify-content-between align-items-center align-middle">
-                                                    <p class="m-0 p-0">${sAvailable}</p>
-                                                    <i class="${faAvailable}"></i>
-                                                    <!-- <i class="fa-solid fa-xmark"></i> -->
-                                                    </div>
-                                                    </li>
-                                                    </ul>
-                                                    <div class="card-body d-flex justify-content-center">
-                                                    <button class ="cardButtonBuy border-0 transition05">Buy Now</button>
-                                                    <!-- <a href="#" class="card-link">Card link</a>
-                                                    <a href="#" class="card-link">Another link</a> -->
-                                                    </div>
-                                                    </div>
-                                                    </div>
-                                                    `
-                        
-                        // let itemAvailable = `<span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger z-3 swiper-slide">
-                        //                         New
-                        //                         </span>
-                        //                         <div class="card" style="width: 15rem;">
-                        //                         <div class="overflow-hidden">
-                        //                         <img src="${element.img}" class="card-img-top transition05" alt="...">
-                        //                         </div>
-                        //                         <div class="card-body d-flex flex-column justify-content-between align-items-center">
-                        //                         <h5 class="card-title">${element.name}</h5>
-                        //                         <p class="card-text">${element.description}</p>
-                        //                         <i class="fa-solid fa-heart-circle-plus"></i>
-                        //                         </div>
-                        //                         <ul class="list-group list-group-flush">
-                        //                         <li class="list-group-item">
-                        //                         <div class="d-flex justify-content-between align-items-center align-middle">
-                        //                         <strong>Price</strong><span>${element.price}</span>
-                        //                         </div></li>
-                        //                         <li class="list-group-item">
-                        //                         <div class="d-flex justify-content-between align-items-center align-middle">
-                        //                         <p class="m-0 p-0">${sAvailable}</p>
-                        //                         <i class="${faAvailable}"></i>
-                        //                         <!-- <i class="fa-solid fa-xmark"></i> -->
-                        //                         </div>
-                        //                         </li>
-                        //                         </ul>
-                        //                         <div class="card-body d-flex justify-content-center">
-                        //                         <button class ="cardButtonBuy border-0 transition05">Buy Now</button>
-                        //                         <!-- <a href="#" class="card-link">Card link</a>
-                        //                         <a href="#" class="card-link">Another link</a> -->
-                        //                         </div>
-                        //                         </div>`
-                        
-                        itemcard.innerHTML = itemAvailable;
-                        
-                        cardContainer.appendChild(itemcard);
-                        
+                    }
+                    
+                    let itemcard = document.createElement("div");
+                    // itemcard.classList.add("col-11", "col-md-4", "p-0", "itemCard", "position-relative", "d-flex", "justify-content-center", "my-4");
+                    itemcard.classList.add("swiper-slide", "itemCard");
+                    let itemAvailable = ` 
+                    <div class="card" style="width: 15rem;">
+                    <div class="overflow-hidden">
+                    <img src="${element.img}" class="card-img-top transition05" alt="...">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between align-items-center">
+                    <h5 class="card-title">${element.nome}</h5>
+                    <p class="card-text">${element.categoria}</p>
+                    <i class="fa-solid fa-heart-circle-plus"></i>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                    <div class="d-flex justify-content-between align-items-center align-middle">
+                    <strong>Price</strong><span>${element.prezzo}</span>
+                    </div></li>
+                    <li class="list-group-item">
+                    <div class="d-flex justify-content-between align-items-center align-middle">
+                    <p class="m-0 p-0">${sAvailable}</p>
+                    <i class="${faAvailable}"></i>
+                    <!-- <i class="fa-solid fa-xmark"></i> -->
+                    </div>
+                    </li>
+                    </ul>
+                    <div class="card-body d-flex justify-content-center">
+                    <button class ="cardButtonBuy border-0 transition05">Buy Now</button>
+                    <!-- <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a> -->
+                    </div>
+                    </div>
+                    `
+                    
+                    // let itemAvailable = `<span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger z-3 swiper-slide">
+                    //                         New
+                    //                         </span>
+                    //                         <div class="card" style="width: 15rem;">
+                    //                         <div class="overflow-hidden">
+                    //                         <img src="${element.img}" class="card-img-top transition05" alt="...">
+                    //                         </div>
+                    //                         <div class="card-body d-flex flex-column justify-content-between align-items-center">
+                    //                         <h5 class="card-title">${element.name}</h5>
+                    //                         <p class="card-text">${element.description}</p>
+                    //                         <i class="fa-solid fa-heart-circle-plus"></i>
+                    //                         </div>
+                    //                         <ul class="list-group list-group-flush">
+                    //                         <li class="list-group-item">
+                    //                         <div class="d-flex justify-content-between align-items-center align-middle">
+                    //                         <strong>Price</strong><span>${element.price}</span>
+                    //                         </div></li>
+                    //                         <li class="list-group-item">
+                    //                         <div class="d-flex justify-content-between align-items-center align-middle">
+                    //                         <p class="m-0 p-0">${sAvailable}</p>
+                    //                         <i class="${faAvailable}"></i>
+                    //                         <!-- <i class="fa-solid fa-xmark"></i> -->
+                    //                         </div>
+                    //                         </li>
+                    //                         </ul>
+                    //                         <div class="card-body d-flex justify-content-center">
+                    //                         <button class ="cardButtonBuy border-0 transition05">Buy Now</button>
+                    //                         <!-- <a href="#" class="card-link">Card link</a>
+                    //                         <a href="#" class="card-link">Another link</a> -->
+                    //                         </div>
+                    //                         </div>`
+                    
+                    itemcard.innerHTML = itemAvailable;
+                    
+                    cardContainer.appendChild(itemcard);
+                    
                     
                     
                 }   ) 

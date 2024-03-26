@@ -108,24 +108,27 @@
     <!-- Swiper -->
     <div class="swiper mySwiper my-5">
       <div class="swiper-wrapper" id="cardContainer">
-        <div class="swiper-slide">
-          <div class="card" style="width: 15rem;">
+        <div class="swiper-slide bg-info">
+          <div class="card" style="width: 15rem;" id="badgeContainer1">
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger z-4">
+              New
+            </span>
             <div class="overflow-hidden">
               <img src="https:/picsum.photos/200" class="card-img-top transition05" alt="...">
             </div>
             <div class="card-body d-flex flex-column justify-content-between align-items-center">
-              <h5 class="card-title">${element.name}</h5>
-              <p class="card-text">${element.description}</p>
+              <h5 class="card-title">NOME</h5>
+              <p class="card-text">DESCRIZIONE</p>
               <i class="fa-solid fa-heart-circle-plus"></i>
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
                 <div class="d-flex justify-content-between align-items-center align-middle">
-                  <strong>Price</strong><span>${element.price}</span>
+                  <strong>Price</strong><span>PREZZO</span>
                 </div></li>
                 <li class="list-group-item">
                   <div class="d-flex justify-content-between align-items-center align-middle">
-                    <p class="m-0 p-0">${sAvailable}</p>
+                    <p class="m-0 p-0">DISPONIBILE</p>
                     <i class="${faAvailable}"></i>
                     <!-- <i class="fa-solid fa-xmark"></i> -->
                   </div>
@@ -137,11 +140,11 @@
                   <a href="#" class="card-link">Another link</a> -->
                 </div>
               </div>
-            </div>
-            
+            </div>            
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
+          <!-- <div class="swiper-pagination"></div> -->
         </div>
         
       </div>

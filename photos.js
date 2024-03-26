@@ -61,7 +61,6 @@
                     } else{
                         sAvailable = "Not Available";
                         faAvailable = "fa-solid fa-xmark";
-                        
                     }
                     
                     let itemcard = document.createElement("div");
