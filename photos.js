@@ -208,25 +208,9 @@
             
             
         });   
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         //FETCH API END
         
-        
-        
         //Function Declaration
-        
-        
         function counterTimer(setPoint, time, target){
             let counter = 0;
             let interval = setInterval(() => {
