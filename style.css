@@ -79,7 +79,7 @@ h1{
     background-color: var(--color-A);
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-
+    
 }
 
 /* CARDS */
@@ -158,7 +158,27 @@ h1{
     
 }
 
+/* SWIPER */
+.swiper {
+    width: 400px;
+    height: 400px;
+}
 
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 

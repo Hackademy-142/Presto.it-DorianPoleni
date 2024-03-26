@@ -1,4 +1,4 @@
-// Tag Declaration
+// *** Tag Declaration ***
 
 navbar = document.querySelector(".navbar");
 navbarBrand = document.querySelector("#navbarBrand");
@@ -18,7 +18,8 @@ let items = [
 
 
 
-//Main Program
+
+// *** Main Program ***
 window.addEventListener("scroll", () => {
     if (window.scrollY > 0){
         navbar.classList.add("navbarScrolled");
@@ -38,9 +39,6 @@ window.addEventListener("scroll", () => {
     }
 })
 
-
-
-
 //interesection observer
 let isIntersected = false;
 const intersectNArticles = new IntersectionObserver( 
@@ -57,13 +55,21 @@ const intersectNArticles = new IntersectionObserver(
         }
         )
         
-        intersectNArticles.observe(nArticles);
-        
-        //Create cards
-        createCards(items);
-        
-        //Function Declaration
-        function createCards(items){
+intersectNArticles.observe(nArticles);
+
+//Swiper
+const swiper = new Swiper(".mySwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+//Create cards
+createCards(items);
+
+// *** Function Declaration ***
+function createCards(items){
             items.forEach( (element,index) => {
                 //Create last 3 Card Object entries
                 if (index >= items.length - 3){
@@ -82,7 +88,7 @@ const intersectNArticles = new IntersectionObserver(
                     
                     let itemcard = document.createElement("div");
                     itemcard.classList.add("col-11", "col-md-4", "p-0", "itemCard", "position-relative", "d-flex", "justify-content-center", "my-4");
-                    let itemAvailable = `<span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger z-3">
+                    let itemAvailable = `<span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger z-3 swiper-slide">
                     New
                     </span>
                     <div class="card" style="width: 15rem;">
@@ -122,12 +128,12 @@ const intersectNArticles = new IntersectionObserver(
                 
             }   ) 
             
-        }
-        
-        function counterTimer(setPoint, time, target){
+}
+
+function counterTimer(setPoint, time, target){
             let counter = 0;
             let interval = setInterval(() => {
-
+                
                 if (counter < setPoint){
                     counter++;
                     // console.log(counter);
@@ -137,9 +143,12 @@ const intersectNArticles = new IntersectionObserver(
                     clearInterval(interval);
                 }
             }, (time/setPoint)*time);
-           
-        }
+            
+}
 
 
+
+
+        
         
         
